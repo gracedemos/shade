@@ -80,6 +80,8 @@ int main(void)
 		fprintf(stderr, "Error: Failed to create window or renderer\n");
 		return 1;
 	}
+	width /= RENDER_SCALE;
+	height /= RENDER_SCALE;
 	SDL_SetRenderVSync(renderer, 1);
 	if ((texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA128_FLOAT, SDL_TEXTUREACCESS_STREAMING, width, height)) == NULL) {
 		fprintf(stderr, "Error: Failed to create texture\n");
