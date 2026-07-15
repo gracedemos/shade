@@ -43,7 +43,7 @@ void render(double start_time, double current_time)
 			uv.x *= (float)width / height;
 
 			double d = vec2_length(vec2_sub(mouse, uv));
-			double dist = dist_scale * 1.0 / (d * d);
+			double dist = dist_scale / (d * d);
 			uv = vec2_lerp(uv, mouse, dist);
 
 			uv = vec2_scale(uv, 2.0);
